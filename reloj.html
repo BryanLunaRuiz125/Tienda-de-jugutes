@@ -1,0 +1,33 @@
+<DOCTYPE html>
+    <html>
+    <head>
+        <title>Reloj Digital</title>
+<script>
+ function actualizarReloj() {
+    var ahora = new Date();
+    var horas = ahora.getHours();
+    var minutos = ahora.getMinutes();
+    var segundos = ahora.getSeconds();
+
+    // Añade un cero delante de los números menores de 10 para mantener el formato de dos dígitos
+    horas = (horas < 10) ? "0" + horas : horas;
+    minutos = (minutos < 10) ? "0" + minutos : minutos;
+    segundos = (segundos < 10) ? "0" + segundos : segundos;
+
+    var tiempo = horas + ":" + minutos + ":" + segundos;
+
+    // Actualiza el contenido del elemento con id="reloj" con el tiempo actual
+    document.getElementById("reloj").innerText = tiempo;
+}
+
+// Llama a la función actualizarReloj cada segundo
+setInterval(actualizarReloj, 1000);
+setInterval(currentTime, 1000);</script>
+
+</script>
+</head>
+
+        <body>
+            <div id="watch"></div>
+        </body>
+</html>
